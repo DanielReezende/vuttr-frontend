@@ -18,12 +18,9 @@ interface ToolsContextData {
   handleKeyDown: (e: any) => void;
 }
 
-
 interface ToolsProviderPros {
   children: ReactNode
 }
-
-
 
 const ToolsContext = createContext({} as ToolsContextData);
 

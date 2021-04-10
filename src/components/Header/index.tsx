@@ -11,7 +11,11 @@ import {
   SearchContainer 
 } from './styles';
 
-export function Header() {
+interface HeaderPros {
+  onOpenNewToolModal: () => void;
+}
+
+export function Header({ onOpenNewToolModal }: HeaderPros) {
   const { searchInTags, handleCheckbox } = useTools();
   return (
     <Container>
@@ -34,7 +38,7 @@ export function Header() {
             <label htmlFor="searchInTags">Search in tags only</label>
           </SearchContainer>
 
-          <Button>
+          <Button onClick={onOpenNewToolModal}>
             <FiPlusSquare />
           Add tool
         </Button>
